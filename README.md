@@ -8,4 +8,4 @@
 
 ## List of templates
 
-- TemplateModuleWindowsDiskPerformance.yml - Collect Windows disk performance.
+- TemplateModuleWindowsDiskPerformance.yml - Collect Windows disk performance indicator.
