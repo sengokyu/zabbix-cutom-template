@@ -8,7 +8,13 @@
 
 ## List of templates
 
-- TemplateModuleWindowsDiskPerformance.yml - Collect Windows disk performance indicator.
-- TemplateModuleWindowsSMBServerPC.yml - SMB Server performance counter.
-- TemplateModuleWindowsSMBServerSessionsPC.yml - SMB Server Session performance counter.
-- TemplateModuleWindowsSMBServerSharesPC.yml - SMB Server Shares performance counter.
+<dl>
+<dt>TemplateModuleWindowsDiskPerformance.yml
+<dd>Collect Windows disk performance indicator.
+<dt>TemplateModuleWindowsSMBServerPC.yml
+<dd>SMB Server performance counter.
+<dt>TemplateModuleWindowsSMBServerSessionsPC.yml
+<dd>SMB Server Session performance counter.
+<dt>TemplateModuleWindowsSMBServerSharesPC.yml
+<dd>SMB Server Shares performance counter.
+</dl>
