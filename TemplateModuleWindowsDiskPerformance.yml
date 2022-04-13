@@ -1,0 +1,251 @@
+zabbix_export:
+  version: '5.4'
+  date: '2022-04-13T05:17:50Z'
+  groups:
+    -
+      uuid: 57b7ae836ca64446ba2c296389c009b7
+      name: Templates/Modules
+  templates:
+    -
+      uuid: 673b8145b7514fc985ee47114923332d
+      template: 'Template Module Windows Disk Performance'
+      name: 'Template Module Windows Disk Performance'
+      groups:
+        -
+          name: Templates/Modules
+      items:
+        -
+          uuid: 8f2f347880364453b1563df2655bf401
+          name: 'Disk Time Total'
+          key: 'perf_counter[\PhysicalDisk(_Total)\% Disk Time]'
+          history: 1w
+          value_type: FLOAT
+          units: '%'
+          tags:
+            -
+              tag: Application
+              value: Filesystems
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: c02c39498e3f4e089f28542010d37060
+          name: 'Disk Bytes/sec Total'
+          key: 'perf_counter[\PhysicalDisk(_Total)\Disk Bytes/sec]'
+          history: 1w
+          value_type: FLOAT
+          units: B
+          tags:
+            -
+              tag: Application
+              value: Filesystems
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 15ff340f5aec4ddcbdb01de9977a88f0
+          name: 'Disk Transfers/sec Total'
+          key: 'perf_counter[\PhysicalDisk(_Total)\Disk Transfers/sec]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Filesystems
+            -
+              tag: Application
+              value: Performance
+      discovery_rules:
+        -
+          uuid: ba8b2b4540144ed39db0a1ab76fbe934
+          name: 'Disk discovery'
+          key: vfs.fs.discovery
+          delay: 1d
+          filter:
+            conditions:
+              -
+                macro: '{#FSTYPE}'
+                value: '@File systems for discovery'
+                formulaid: A
+          item_prototypes:
+            -
+              uuid: 5f55be119bab4a2ca22fe74bfb4ff0e7
+              name: 'Disk Time {#FSNAME}'
+              key: 'perf_counter[\PhysicalDisk(* {#FSNAME})\% Disk Time]'
+              history: 1w
+              value_type: FLOAT
+              units: '%'
+              tags:
+                -
+                  tag: Application
+                  value: Filesystems
+                -
+                  tag: Application
+                  value: Performance
+            -
+              uuid: 9979a14c47a24c3e8f6fed1f03096192
+              name: 'Average Disk Read Queue Length {#FSNAME}'
+              key: 'perf_counter[\PhysicalDisk(* {#FSNAME})\Avg. Disk Read Queue Length]'
+              history: 1w
+              value_type: FLOAT
+              tags:
+                -
+                  tag: Application
+                  value: Filesystems
+                -
+                  tag: Application
+                  value: Performance
+            -
+              uuid: c90f0ce3d70944e880577796142d88bb
+              name: 'Average Disk sec/Read {#FSNAME}'
+              key: 'perf_counter[\PhysicalDisk(* {#FSNAME})\Avg. Disk sec/Read]'
+              history: 1w
+              value_type: FLOAT
+              units: s
+              tags:
+                -
+                  tag: Application
+                  value: Filesystems
+                -
+                  tag: Application
+                  value: Performance
+            -
+              uuid: b9ac589e7e41408b9845f2e22e083344
+              name: 'Average Disk sec/Write {#FSNAME}'
+              key: 'perf_counter[\PhysicalDisk(* {#FSNAME})\Avg. Disk sec/Write]'
+              history: 1w
+              value_type: FLOAT
+              units: s
+              tags:
+                -
+                  tag: Application
+                  value: Filesystems
+                -
+                  tag: Application
+                  value: Performance
+            -
+              uuid: 49fd1647278448bfb0ae2502b00405fe
+              name: 'Average Disk Write Queue Length {#FSNAME}'
+              key: 'perf_counter[\PhysicalDisk(* {#FSNAME})\Avg. Disk Write Queue Length]'
+              history: 1w
+              value_type: FLOAT
+              tags:
+                -
+                  tag: Application
+                  value: Filesystems
+                -
+                  tag: Application
+                  value: Performance
+            -
+              uuid: 6266769192264cffaf081c1c289fa50b
+              name: 'Disk Read Bytes/sec {#FSNAME}'
+              key: 'perf_counter[\PhysicalDisk(* {#FSNAME})\Disk Read Bytes/sec]'
+              history: 1w
+              value_type: FLOAT
+              units: B
+              tags:
+                -
+                  tag: Application
+                  value: Filesystems
+                -
+                  tag: Application
+                  value: Performance
+            -
+              uuid: c56ff67ca35c4246b071982fb196893c
+              name: 'Disk Reads/sec {#FSNAME}'
+              key: 'perf_counter[\PhysicalDisk(* {#FSNAME})\Disk Reads/sec]'
+              history: 1w
+              value_type: FLOAT
+              tags:
+                -
+                  tag: Application
+                  value: Filesystems
+                -
+                  tag: Application
+                  value: Performance
+            -
+              uuid: 08e80c0ce74f45d8b1b484bdcf6f48d2
+              name: 'Disk Write Bytes/sec {#FSNAME}'
+              key: 'perf_counter[\PhysicalDisk(* {#FSNAME})\Disk Write Bytes/sec]'
+              history: 1w
+              value_type: FLOAT
+              units: B
+              tags:
+                -
+                  tag: Application
+                  value: Filesystems
+                -
+                  tag: Application
+                  value: Performance
+            -
+              uuid: 77ec0506ebc1463886319ca7443f3e53
+              name: 'Disk Writes/sec {#FSNAME}'
+              key: 'perf_counter[\PhysicalDisk(* {#FSNAME})\Disk Writes/sec]'
+              history: 1w
+              value_type: FLOAT
+              tags:
+                -
+                  tag: Application
+                  value: Filesystems
+                -
+                  tag: Application
+                  value: Performance
+          graph_prototypes:
+            -
+              uuid: 99299a51360547489463f09af5edd61b
+              name: 'Disk Read/Write Bytes'
+              graph_items:
+                -
+                  sortorder: '1'
+                  color: 1A7C11
+                  calc_fnc: ALL
+                  item:
+                    host: 'Template Module Windows Disk Performance'
+                    key: 'perf_counter[\PhysicalDisk(* {#FSNAME})\Disk Read Bytes/sec]'
+                -
+                  sortorder: '2'
+                  color: F63100
+                  calc_fnc: ALL
+                  item:
+                    host: 'Template Module Windows Disk Performance'
+                    key: 'perf_counter[\PhysicalDisk(* {#FSNAME})\Disk Write Bytes/sec]'
+            -
+              uuid: 71c3a8caf3384af9a6fbc5f8e9b6a528
+              name: 'Disk Read/Write {#FSNAME}'
+              graph_items:
+                -
+                  sortorder: '1'
+                  color: 1A7C11
+                  calc_fnc: MAX
+                  item:
+                    host: 'Template Module Windows Disk Performance'
+                    key: 'perf_counter[\PhysicalDisk(* {#FSNAME})\Avg. Disk Read Queue Length]'
+                -
+                  sortorder: '2'
+                  color: F63100
+                  calc_fnc: MAX
+                  item:
+                    host: 'Template Module Windows Disk Performance'
+                    key: 'perf_counter[\PhysicalDisk(* {#FSNAME})\Avg. Disk Write Queue Length]'
+                -
+                  sortorder: '3'
+                  color: 2774A4
+                  item:
+                    host: 'Template Module Windows Disk Performance'
+                    key: 'perf_counter[\PhysicalDisk(* {#FSNAME})\Disk Reads/sec]'
+                -
+                  sortorder: '4'
+                  color: A54F10
+                  item:
+                    host: 'Template Module Windows Disk Performance'
+                    key: 'perf_counter[\PhysicalDisk(* {#FSNAME})\Disk Writes/sec]'
+            -
+              uuid: 8c47bc276dae4410b1d44d2fa8a59017
+              name: 'Disk Time {#FSNAME}'
+              graph_items:
+                -
+                  sortorder: '1'
+                  color: 1A7C11
+                  item:
+                    host: 'Template Module Windows Disk Performance'
+                    key: 'perf_counter[\PhysicalDisk(* {#FSNAME})\% Disk Time]'
