@@ -1,0 +1,615 @@
+zabbix_export:
+  version: '5.4'
+  groups:
+    -
+      uuid: 57b7ae836ca64446ba2c296389c009b7
+      name: Templates/Modules
+  templates:
+    -
+      uuid: fd14c6c9a90e4fbb9861eed531daa1ab
+      template: 'Template Module Windows SMB Server Shares'
+      name: 'Template Module Windows SMB Server Shares'
+      groups:
+        -
+          name: Templates/Modules
+      items:
+        -
+          uuid: e52d3aae9eca473fb735edc4812f4d2f
+          name: 'SMB Server Shares(_Total) % Persistent Handles'
+          key: 'perf_counter[\SMB Server Shares(_Total)\% Persistent Handles]'
+          history: 1w
+          value_type: FLOAT
+          units: '%'
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: ba644684e0d14fc1b6cc0f20b8b94f66
+          name: 'SMB Server Shares(_Total) % Resilient Handles'
+          key: 'perf_counter[\SMB Server Shares(_Total)\% Resilient Handles]'
+          history: 1w
+          value_type: FLOAT
+          units: '%'
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 8489b74ab9eb40fd883a03fa1e6b79cf
+          name: 'SMB Server Shares(_Total) Avg. Bytes/Read'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Avg. Bytes/Read]'
+          history: 1w
+          value_type: FLOAT
+          units: 'B'
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 84966471037d497c855a518f95a31a40
+          name: 'SMB Server Shares(_Total) Avg. Bytes/Write'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Avg. Bytes/Write]'
+          history: 1w
+          value_type: FLOAT
+          units: 'B'
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 7ad1c2eac46845d488b9c26ba3b0f8a3
+          name: 'SMB Server Shares(_Total) Avg. Data Bytes/Request'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Avg. Data Bytes/Request]'
+          history: 1w
+          value_type: FLOAT
+          units: 'B'
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 42125374854e4d0eb888ecb16ed8ecd6
+          name: 'SMB Server Shares(_Total) Avg. Data Queue Length'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Avg. Data Queue Length]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 914a84f73d614307bedeca608d79f883
+          name: 'SMB Server Shares(_Total) Avg. Read Queue Length'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Avg. Read Queue Length]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 94a8caa7bd144dc389139abfec42da79
+          name: 'SMB Server Shares(_Total) Avg. sec/Data Request'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Avg. sec/Data Request]'
+          history: 1w
+          value_type: FLOAT
+          units: 's'
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 824c198a5a7240df85215e77714f0094
+          name: 'SMB Server Shares(_Total) Avg. sec/Read'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Avg. sec/Read]'
+          history: 1w
+          value_type: FLOAT
+          units: 's'
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 6f93311f1df74b6f9755e7203c29c347
+          name: 'SMB Server Shares(_Total) Avg. sec/Request'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Avg. sec/Request]'
+          history: 1w
+          value_type: FLOAT
+          units: 's'
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 368424a244574e699c1fc948844d0d3e
+          name: 'SMB Server Shares(_Total) Avg. sec/Write'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Avg. sec/Write]'
+          history: 1w
+          value_type: FLOAT
+          units: 's'
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: a7d0ab9101bb4ef5ae1d9ac18e104fba
+          name: 'SMB Server Shares(_Total) Avg. Write Queue Length'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Avg. Write Queue Length]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: b9dbaa379fd84d6594a1676e051d385d
+          name: 'SMB Server Shares(_Total) Current Bypass Open File Count'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Current Bypass Open File Count]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 49a6152f27584b69a1d34ca2ad818bf0
+          name: 'SMB Server Shares(_Total) Current Data Queue Length'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Current Data Queue Length]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: f4c6b515ff464703837f8bf607b8e4e3
+          name: 'SMB Server Shares(_Total) Current Durable Open File Count'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Current Durable Open File Count]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 63f05edf82694c349168e1dc510d2fb9
+          name: 'SMB Server Shares(_Total) Current Open File Count'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Current Open File Count]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: c7cfc686f5864d339953d5c27f7c4dbc
+          name: 'SMB Server Shares(_Total) Current Pending Requests'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Current Pending Requests]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 25463fb03fea4c9498185ee1e953fc72
+          name: 'SMB Server Shares(_Total) Data Bytes/sec'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Data Bytes/sec]'
+          history: 1w
+          value_type: FLOAT
+          units: 'B'
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 96279a2808fe49409b23109c326fcb94
+          name: 'SMB Server Shares(_Total) Data Requests/sec'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Data Requests/sec]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: d7c0883af786423f8c5b5f35380c5e10
+          name: 'SMB Server Shares(_Total) Files Opened/sec'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Files Opened/sec]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 13d4c41d9bbe4f64a45421e0d6333cad
+          name: 'SMB Server Shares(_Total) Metadata Requests/sec'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Metadata Requests/sec]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: ae2c788694384f5b9c4d3afe02bcba6c
+          name: 'SMB Server Shares(_Total) Read Bytes transmitted ByPassCSV/sec'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Read Bytes transmitted ByPassCSV/sec]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 76d469c203644c2c8719ea244a4189e2
+          name: 'SMB Server Shares(_Total) Read Bytes transmitted via SMB Direct/sec'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Read Bytes transmitted via SMB Direct/sec]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 8e7f179a412a4088b25b9c4c4c320827
+          name: 'SMB Server Shares(_Total) Read Bytes/sec'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Read Bytes/sec]'
+          history: 1w
+          value_type: FLOAT
+          units: 'B'
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: ffd4f720a93047e7b2e6536c8d1dcc3f
+          name: 'SMB Server Shares(_Total) Read Requests transmitted via BypassCSV/sec'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Read Requests transmitted via BypassCSV/sec]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: f6ba2696e6de40dcbc859a5427c14967
+          name: 'SMB Server Shares(_Total) Read Requests transmitted via SMB Direct/sec'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Read Requests transmitted via SMB Direct/sec]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: b0331d3fcbb44b06b9ef52ef702d8e9a
+          name: 'SMB Server Shares(_Total) Read Requests/sec'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Read Requests/sec]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 3602ccd89b0e47509a1f03b31f8e0ffd
+          name: 'SMB Server Shares(_Total) Received Bytes/sec'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Received Bytes/sec]'
+          history: 1w
+          value_type: FLOAT
+          units: 'B'
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: d4287697af404295945a70689a54d490
+          name: 'SMB Server Shares(_Total) Requests/sec'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Requests/sec]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 13da9f29cf2a41d2bde89e9520af8a1d
+          name: 'SMB Server Shares(_Total) Sent Bytes/sec'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Sent Bytes/sec]'
+          history: 1w
+          value_type: FLOAT
+          units: 'B'
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: d1ca712af4c64616a0f0a24743b88d79
+          name: 'SMB Server Shares(_Total) Total Durable Handle Reopen Count'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Total Durable Handle Reopen Count]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 020b835c3d13408285afa6cd5de1e0d9
+          name: 'SMB Server Shares(_Total) Total Failed Durable Handle Reopen Count'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Total Failed Durable Handle Reopen Count]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 89029891a6e54fe69e6d666a2653baf5
+          name: 'SMB Server Shares(_Total) Total Failed Persistent Handle Reopen Count'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Total Failed Persistent Handle Reopen Count]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 0f2051c15d1c4e688530e1e8991ab52e
+          name: 'SMB Server Shares(_Total) Total Failed Resilient Handle Reopen Count'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Total Failed Resilient Handle Reopen Count]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: a9797c4e5b244786897d9e1d245eaa98
+          name: 'SMB Server Shares(_Total) Total File Open Count'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Total File Open Count]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 1362c8a457524a889ab8a25b037a2574
+          name: 'SMB Server Shares(_Total) Total Persistent Handle Reopen Count'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Total Persistent Handle Reopen Count]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 94a2f9927b87437dafb7a474f1d4f95f
+          name: 'SMB Server Shares(_Total) Total Resilient Handle Reopen Count'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Total Resilient Handle Reopen Count]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 77e27c1c185b408a9705b6cc870fd167
+          name: 'SMB Server Shares(_Total) Transferred Bytes/sec'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Transferred Bytes/sec]'
+          history: 1w
+          value_type: FLOAT
+          units: 'B'
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 81738144356f41f29e3d757d9269f636
+          name: 'SMB Server Shares(_Total) Tree Connect Count'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Tree Connect Count]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 797b67ed289342d39e79ac076ac03c61
+          name: 'SMB Server Shares(_Total) Write Bytes transmitted ByPassCSV/sec'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Write Bytes transmitted ByPassCSV/sec]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 757fcb13603d4f20962c75d0ff0e9878
+          name: 'SMB Server Shares(_Total) Write Bytes transmitted via SMB Direct/sec'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Write Bytes transmitted via SMB Direct/sec]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: f5715d47aa324d1aad84f4a9dac8e244
+          name: 'SMB Server Shares(_Total) Write Bytes/sec'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Write Bytes/sec]'
+          history: 1w
+          value_type: FLOAT
+          units: 'B'
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 589c7ba949374920ac5ffc9613442151
+          name: 'SMB Server Shares(_Total) Write Requests transmitted via BypassCSV/sec'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Write Requests transmitted via BypassCSV/sec]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: f93af88d81564497993d2baa294fe4ec
+          name: 'SMB Server Shares(_Total) Write Requests transmitted via SMB Direct/sec'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Write Requests transmitted via SMB Direct/sec]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 8113a05f2f0d405182324d6f6014adb2
+          name: 'SMB Server Shares(_Total) Write Requests/sec'
+          key: 'perf_counter[\SMB Server Shares(_Total)\Write Requests/sec]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance

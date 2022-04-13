@@ -1,0 +1,97 @@
+zabbix_export:
+  version: '5.4'
+  groups:
+    -
+      uuid: 57b7ae836ca64446ba2c296389c009b7
+      name: Templates/Modules
+  templates:
+    -
+      uuid: 8adacc4bfaf147388d30e680df07c603
+      template: 'Template Module Windows SMB Server'
+      name: 'Template Module Windows SMB Server'
+      groups:
+        -
+          name: Templates/Modules
+      items:
+        -
+          uuid: 9c48636982b843538331a434598d09cb
+          name: 'SMB Server Read Bytes/sec'
+          key: 'perf_counter[\SMB Server\Read Bytes/sec]'
+          history: 1w
+          value_type: FLOAT
+          units: 'B'
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 2e8b2946271a4f2d858dd3ab1e9eab7a
+          name: 'SMB Server Read Requests/sec'
+          key: 'perf_counter[\SMB Server\Read Requests/sec]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: 678e8b6a5d6841a383db41815a39afb9
+          name: 'SMB Server Receive Bytes/sec'
+          key: 'perf_counter[\SMB Server\Receive Bytes/sec]'
+          history: 1w
+          value_type: FLOAT
+          units: 'B'
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: d5062f2992cc4de4be85a7c53f22ffe7
+          name: 'SMB Server Send Bytes/sec'
+          key: 'perf_counter[\SMB Server\Send Bytes/sec]'
+          history: 1w
+          value_type: FLOAT
+          units: 'B'
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: e112149022c64892b8134d26e4a968c6
+          name: 'SMB Server Write Bytes/sec'
+          key: 'perf_counter[\SMB Server\Write Bytes/sec]'
+          history: 1w
+          value_type: FLOAT
+          units: 'B'
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
+        -
+          uuid: caba24c9dc754bbca19786e86c12c8dc
+          name: 'SMB Server Write Requests/sec'
+          key: 'perf_counter[\SMB Server\Write Requests/sec]'
+          history: 1w
+          value_type: FLOAT
+          tags:
+            -
+              tag: Application
+              value: Server
+            -
+              tag: Application
+              value: Performance
